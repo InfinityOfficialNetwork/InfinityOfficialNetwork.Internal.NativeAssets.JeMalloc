@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>InfinityOfficialNetwork.Internal.NativeAssets.JeMalloc</PackageId>
+		<Version>1.0.0</Version>
+		<Title>InfinityOfficialNetwork Jemalloc Native Assets</Title>
+		<Authors>InfinityOfficialNetwork</Authors>
+		<Description>Native assets for JeMalloc
+Platforms: Windows (x64, x86) and Linux (x64, arm64)</Description>
+		<Copyright>license.md</Copyright>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="runtimes/win-x64/native/jemalloc.dll">
+			<PackagePath>runtimes/win-x64/native/%(FileName)%(Extension)</PackagePath>
+			<Pack>true</Pack>
+			<AssetType>Native</AssetType>
+		</None>
+
+		<None Include="runtimes/win-x86/native/jemalloc.dll">
+			<PackagePath>runtimes/win-x86/native/%(FileName)%(Extension)</PackagePath>
+			<Pack>true</Pack>
+			<AssetType>Native</AssetType>
+		</None>
+
+		<None Include="runtimes/linux-x64/native/libjemalloc.so">
+			<PackagePath>runtimes/linux-x64/native/%(FileName)%(Extension)</PackagePath>
+			<Pack>true</Pack>
+			<AssetType>Native</AssetType>
+		</None>
+	</ItemGroup>
+
+	
+	
+</Project>
